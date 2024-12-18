@@ -1,0 +1,44 @@
+# Rule-Based Chatbot
+
+def chatbot():
+    print("Chatbot: Hi! I am your friendly chatbot. How can I assist you today?")
+    
+    while True:
+        user_input = input("You: ").strip().lower()
+        
+        # Exit condition
+        if user_input in ["exit", "quit", "bye"]:
+            print("Chatbot: Goodbye! Have a great day!")
+            break
+        
+        # Predefined responses
+        elif "hello" in user_input or "hi" in user_input:
+            print("Chatbot: Hello! How can I help you today?")
+        elif "how are you" in user_input:
+            print("Chatbot: I'm just a program, but I'm functioning as expected. How about you?")
+        elif "your name" in user_input:
+            print("Chatbot: I'm called Chatbot. What's your name?")
+        elif "weather" in user_input:
+            print("Chatbot: I can't provide real-time weather updates, but you can check a weather app for details.")
+        elif "help" in user_input:
+            print("Chatbot: Sure! Let me know what you need help with.")
+        elif "time" in user_input:
+            from datetime import datetime
+            current_time = datetime.now().strftime("%H:%M:%S")
+            print(f"Chatbot: The current time is {current_time}.")
+        elif "joke" in user_input:
+            print("Chatbot: Why don't scientists trust atoms? Because they make up everything!")
+        elif "food" in user_input:
+            print("Chatbot: I can't eat, but if I could, I'd probably go for some pizza right now!")
+        elif "robot" in user_input:
+            print("Chatbot: Yep, I'm a robot! But don't worry, I'm a friendly one. No plans for world domination.")
+        elif "bored" in user_input:
+            print("Chatbot: If you're bored, why not try learning something new or telling me a joke?")
+        elif "favorite color" in user_input:
+            print("Chatbot: I like all colors equally. But if I had to choose, I'd say binary gray!")
+        else:
+            print("Chatbot: I'm sorry, I didn't understand that. Could you please rephrase?")
+
+# Run the chatbot
+if __name__ == "__main__":
+    chatbot()
